@@ -1,4 +1,3 @@
 # Keyboard-Tester
 A Keyboard Test Website.
-
-bomboclaaaaaaaaaat
+And more coming soon..
