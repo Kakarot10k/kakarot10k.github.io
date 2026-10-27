@@ -1,0 +1,394 @@
+body{
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+}
+#title{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: center;
+    top: 50px;
+    margin-bottom: -50px;
+    position: relative;
+    font-weight: 700;
+    user-select: none;
+}
+#keyboard-body{
+    width: 1320px;
+    height: 460px;
+    justify-self: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    top: 149px;
+    position: relative;
+}
+.keys{
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+#firstRow-body{
+    margin: 10px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(19, 0fr);
+    gap: 10px;
+}
+#secondRow-body{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(17, 0fr);
+    gap: 10px;
+}
+#thirdRow-body{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(17, 0fr);
+    gap: 10px;
+}
+#fourthRow-body{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(17, 0fr);
+    gap: 10px;
+}
+#fifthRow-body{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(17, 0fr);
+    gap: 10px;
+}
+#sixthRow-body{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(17, 0fr);
+    gap: 10px;
+}
+#arrowKeys-body{
+    margin: 10px;
+    left: 885px;
+    top: 315px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px;
+}
+#ArrowUp{
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+}
+#numpad-body{
+    margin: 10px;
+    margin-left:  1085px;
+    margin-top: -295px;
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 10px;
+}
+#Escape{
+    margin-right: 47.5px;
+}
+#F4{
+    margin-right: 27.5px;
+}
+#F8{
+    margin-right: 27.5px;
+}
+#F12{
+    margin-right: 17.5px;
+}
+#Insert{
+    margin-left: 15px;
+}
+#Delete{
+    margin-left: 15px;
+}
+#Backspace{
+    width: 90px;
+}
+#Tab{
+    width: 75px;
+}
+#Backslash{
+    width: 60px;
+}
+#CapsLock{
+    width: 85px;
+}
+#Enter{
+    width: 110px;
+}
+#ShiftLeft{
+    width: 115px;
+}
+#ShiftRight{
+    width: 140px;
+}
+#ControlLeft{
+    width: 75px;
+}
+#MetaLeft{
+    width: 65px;
+}
+#AltLeft{
+    width: 65px;
+}
+#Space{
+    width: 285px;
+}
+#AltRight{
+    width: 65px;
+}
+#MetaRight{
+    width: 65px;
+}
+#ContextMenu{
+    width: 65px;
+}
+#ControlRight{
+    width: 75px;
+}
+.none{
+    border: none;
+    margin-left: -60px;
+}
+#Numpad0{
+    width: 105px;
+}
+#NumpadDivide{
+    margin-left: -60px;
+}
+#NumpadMultiply{
+    margin-left: -60px;
+}
+#NumpadSubtract{
+    margin-left: -60px;
+}
+#Numpad8{
+    margin-left: -60px;
+}
+#Numpad9{
+    margin-left: -60px;
+}
+#NumpadAdd{
+    height: 105px;
+    margin-left: -60px;
+    margin-top: -60px;
+}
+#Numpad5{
+    margin-left: -60px;
+}
+#Numpad6{
+    margin-left: -60px;
+}
+#Numpad2{
+    margin-left: -60px;
+}
+#Numpad3{
+    margin-left: -60px;
+}
+#NumpadEnter{
+    height: 105px;
+    margin-top: -60px;
+}
+#mousePad-body{
+    margin: 10px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    justify-self: center;
+}
+#leftClick{
+    width: 175px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-right: 5px;
+}
+#middleClick{
+    width: 20px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 7px;
+    position: absolute;
+    justify-self: center;
+    margin-top: -2.5px;
+}
+#rightClick{
+    width: 175px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-left: 5px;
+}
+#blackBox{
+    position: absolute;
+    width: 50px;
+    height: 44px;
+    justify-self: center;
+    background-color: black;
+}
+#note{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 205px;
+    margin-left: 827px;
+    margin-top: 112px;
+    margin-bottom: -144px;
+    position: relative;
+    user-select: none;
+}
+#arrow{
+    margin-right: 107px;
+    margin-top: -3px;
+    rotate: 180deg;
+}
+#reset{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 90px;
+    height: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    left: 1200px;
+    top: 403px;
+    position: absolute;
+    user-select: none;
+}
+#reset:hover{
+    background-color: rgb(36, 36, 36);
+}
+#reset:active{
+    background-color: rgb(53, 53, 53);
+}
+#indicators-body{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 40px;
+}
+.indicators{
+    width: 14px;
+    height: 14px;
+    margin-top: 40px;
+    margin-bottom: -20px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    background: rgb(0, 0, 0);
+    transition: background-color 0.1s, box-shadow 0.1s ease;
+}
+#NumLockIndicator{
+    margin-left: 55px;
+}
+.indicators-text{
+    color: white;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    position: absolute;
+    top: 15px;
+    margin-left: 1px;
+}
+#fullscreen{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    margin-left: 1187px;
+    margin-top: 77px;
+    position: absolute;
+    user-select: none;
+    z-index: 20;
+}
+#fullscreen:hover{
+    background-color: rgb(36, 36, 36);
+}
+#fullscreen:active{
+    background-color: rgb(53, 53, 53);
+}
+#keyboard-top{
+    width: 1320px;
+    justify-self: center;
+}
+#highlight-background{
+    justify-self: center;
+    background: black;
+    position: absolute;
+    opacity: 0%;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+#highlight{
+    width: 240px;
+    height: 120px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position: absolute;
+    justify-self: center;
+    margin-left: 1090px;
+    margin-top: 10px;
+    z-index: 10;
+    opacity: 0%;
+    transition: opacity 1.0s ease;
+}
+#highlight-text{
+    font-weight: 600;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+#highlight-arrowLine1{
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+#highlight-arrowLine2{
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 35px;
+    margin-left: 49px;
+}
+#highlight-arrowEnd{
+    font-weight: 500;
+    font-size: xx-large;
+    margin-top: 59px;
+    margin-left: 58px;
+}
+#highlight-exit{
+    font-weight: 700;
+    font-size: small;
+    margin-top: 105px;
+    margin-left: 25px;
+    opacity: 0%;
+    transition: opacity 1.0s ease;
+}
+.highlights{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    position: absolute;
+    white-space: nowrap;
+}
