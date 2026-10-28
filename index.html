@@ -24,6 +24,13 @@
 
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+
+        const db = getDatabase(app);
+        const visitsRef = ref(db, 'visits');
+
+        runTransaction(visitsRef, (currentValue) => {
+            return (currentValue || 0) + 1;
+        });
     </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466857342785316" crossorigin="anonymous"></script>
