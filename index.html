@@ -10,6 +10,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-analytics.js";
+        import { getDatabase, ref, set, increment } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyAqKdToQ3Me-GuLAuSN__7ZOheSqzFkioc",
@@ -28,9 +29,7 @@
         const db = getDatabase(app);
         const visitsRef = ref(db, 'visits');
 
-        runTransaction(visitsRef, (currentValue) => {
-            return (currentValue || 0) + 1;
-        });
+        set(visitsRef, increment(1));
     </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466857342785316" crossorigin="anonymous"></script>
