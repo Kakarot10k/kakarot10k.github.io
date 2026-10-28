@@ -10,7 +10,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-analytics.js";
-        import { getDatabase, ref, set, increment, onValue } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-database.js";
+        import { getDatabase, ref, set, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyAqKdToQ3Me-GuLAuSN__7ZOheSqzFkioc",
@@ -29,12 +29,14 @@
         const db = getDatabase(app);
         const visitsRef = ref(db, 'visits');
 
-        set(visitsRef, increment(1));
-
-        onValue(ref(db, 'visits'), (value) => {
+        onValue(visitsRef, (value) => {
             const count = value.val() || 0;
             document.getElementById('visits').innerHTML = 'Visits: '+count;
         })
+
+        runTransaction(visitsRef, (value) => {
+            return (value || 0) + 1;
+        });
     </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466857342785316" crossorigin="anonymous"></script>
