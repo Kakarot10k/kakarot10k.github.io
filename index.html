@@ -31,7 +31,7 @@
 
         set(visitsRef, increment(1));
 
-        OnValue(ref(db, 'visits'), (value) => {
+        onValue(ref(db, 'visits'), (value) => {
             const count = value.val() || 0;
             document.getElementById('visits').innerHTML = 'Visits: '+count;
         })
