@@ -28,12 +28,8 @@
 
         const db = getDatabase(app);
         const visitsRef = ref(db, 'visits');
-        const newVisitRef = push(visitsRef); 
 
         set(visitsRef, increment(1));
-        set(newVisitRef, {
-        timestamp: serverTimestamp()
-        });
 
         function updateVisits() {
             document.getElementById('visits').innerHTML = 'Visits: '+visitsRef+1;
@@ -203,7 +199,7 @@
         </div>
         <button id="reset" onclick="reset()" title="Reset keys">Reset</button>
         <span id="bottomWrapper">
-            <a id="TOS" href="https://github.com/Kakarot10k/kakarot10k.github.io/blob/main/LICENSE">Terms Of Service</a>
+            <a id="TOU" href="https://github.com/Kakarot10k/kakarot10k.github.io/blob/main/LICENSE">Terms Of Use</a>
             <a>&ensp;-&ensp;</a>
             <a id="visits">Visits: </a>
         </span>

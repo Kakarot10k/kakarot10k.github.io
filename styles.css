@@ -400,9 +400,12 @@ body{
     margin-top: 5px;
     margin-left: 40%;
 }
-#TOS:link{
+#TOU:link{
     color: rgb(224, 224, 224);
 }
-#TOS:visited{
+#TOU:visited{
     color: rgb(224, 224, 224);
+}
+#TOU:hover{
+    color: white;
 }

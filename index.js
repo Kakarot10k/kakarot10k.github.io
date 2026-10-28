@@ -29,7 +29,7 @@ window.addEventListener('mousedown', (event) => {
 	if (highlightMode > 1) {
 		if (event.target.id === "reset") return;
         if (event.target.id === "fullscreen") return;
-        if (event.target.id === "TOS") return;
+        if (event.target.id === "TOU") return;
 		if (event.button === 0) {
 			color('leftClick', 1);
 		}
@@ -47,7 +47,7 @@ window.addEventListener('mouseup', (event) => {
 	if (highlightMode > 1) {
 		if (event.target.id === "reset") return;
         if (event.target.id === "fullscreen") return;
-        if (event.target.id === "TOS") return;
+        if (event.target.id === "TOU") return;
 		if (event.button === 0) {
 			color('leftClick', 2);
 		}
@@ -62,7 +62,7 @@ window.addEventListener('mouseup', (event) => {
     updateModifiers();
 });
 window.addEventListener('contextmenu', (event) => {
-    if (event.target.id != "TOS") event.preventDefault();
+    if (event.target.id != "TOU") event.preventDefault();
 });
 window.addEventListener("pointerover", (event) => {
     getModifiers();
