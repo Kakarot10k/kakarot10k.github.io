@@ -392,3 +392,17 @@ body{
     position: absolute;
     white-space: nowrap;
 }
+#bottomWrapper{
+    color: rgb(224, 224, 224);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 40%;
+}
+#TOS:link{
+    color: rgb(224, 224, 224);
+}
+#TOS:visited{
+    color: rgb(224, 224, 224);
+}

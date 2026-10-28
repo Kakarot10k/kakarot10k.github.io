@@ -28,8 +28,18 @@
 
         const db = getDatabase(app);
         const visitsRef = ref(db, 'visits');
+        const newVisitRef = push(visitsRef); 
 
         set(visitsRef, increment(1));
+        set(newVisitRef, {
+        timestamp: serverTimestamp()
+        });
+
+        function updateVisits() {
+            document.getElementById('visits').innerHTML = 'Visits: '+visitsRef+1;
+
+            setInterval(updateVisits, 1000);
+        }
     </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466857342785316" crossorigin="anonymous"></script>
@@ -192,6 +202,11 @@
             <div class="keys" id="rightClick"></div>
         </div>
         <button id="reset" onclick="reset()" title="Reset keys">Reset</button>
+        <span id="bottomWrapper">
+            <a id="TOS" href="https://github.com/Kakarot10k/kakarot10k.github.io/blob/main/LICENSE">Terms Of Service</a>
+            <a>&ensp;-&ensp;</a>
+            <a id="visits">Visits: </a>
+        </span>
     </div>
     <script src="index.js"></script>
 </body>

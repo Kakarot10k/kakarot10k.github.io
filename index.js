@@ -1,9 +1,9 @@
 const keys = document.getElementsByClassName('keys');
-let NumLockState, CapsLockState, ScrollLockState;
-let shadow = `0 0 20px 0px lime`, noshadow = "none";
 const highlightBgEl = document.getElementById("highlight-background");
 const highlightEl = document.getElementById("highlight");
 const highlightExitEl = document.getElementById("highlight-exit");
+let NumLockState, CapsLockState, ScrollLockState;
+let shadow = `0 0 20px 0px lime`, noshadow = "none";
 let highlightMode = 0;
 let clickable = false;
 
@@ -28,6 +28,8 @@ window.addEventListener('mousedown', (event) => {
 	else if (highlightMode === 1) removeHighlight();
 	if (highlightMode > 1) {
 		if (event.target.id === "reset") return;
+        if (event.target.id === "fullscreen") return;
+        if (event.target.id === "TOS") return;
 		if (event.button === 0) {
 			color('leftClick', 1);
 		}
@@ -44,6 +46,8 @@ window.addEventListener('mousedown', (event) => {
 window.addEventListener('mouseup', (event) => {
 	if (highlightMode > 1) {
 		if (event.target.id === "reset") return;
+        if (event.target.id === "fullscreen") return;
+        if (event.target.id === "TOS") return;
 		if (event.button === 0) {
 			color('leftClick', 2);
 		}
@@ -58,7 +62,7 @@ window.addEventListener('mouseup', (event) => {
     updateModifiers();
 });
 window.addEventListener('contextmenu', (event) => {
-    event.preventDefault();
+    if (event.target.id != "TOS") event.preventDefault();
 });
 window.addEventListener("pointerover", (event) => {
     getModifiers();
