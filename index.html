@@ -35,7 +35,7 @@
 
         onValue(visitsRef, (value) => {
             const count = value.val() || 0;
-            document.getElementById('visits').innerHTML = 'Visits: '+count;
+            if (count != 1) document.getElementById('visits').innerHTML = 'Visits: '+count;
         })
     </script>
 
